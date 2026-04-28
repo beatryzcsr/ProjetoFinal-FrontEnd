@@ -4,11 +4,11 @@ import Navbar from '../components/Navbar.jsx';
 import API_URL from '../services/api.js';
 
 const CATEGORIAS = [
-  'Ferramentas de Corte',
-  'Pastilhas e Insertos',
-  'Eixos e Componentes',
-  'Transmissão',
-  'Buchas e Rolamentos',
+  'Chinesa',
+  'Japonesa',
+  'Coreana',
+  'Tailandesa',
+  'Vietnamita',
   'Outros',
 ];
 
@@ -39,7 +39,7 @@ export default function Cadastro() {
 
       if (!resposta.ok) {
         const err = await resposta.json().catch(() => ({}));
-        throw new Error(err.mensagem || 'Erro ao cadastrar');
+        throw new Error(err.erro || 'Erro ao cadastrar');
       }
 
       setMsg('sucesso');
@@ -56,19 +56,19 @@ export default function Cadastro() {
     <div>
       <Navbar />
       <div className="container">
-        <h1>Cadastrar Produto</h1>
+        <h1>Cadastrar Comida</h1>
 
-        {msg === 'sucesso' && <div className="msg msg-sucesso">✅ Produto cadastrado! Redirecionando...</div>}
+        {msg === 'sucesso' && <div className="msg msg-sucesso">✅ Comida cadastrada! Redirecionando...</div>}
         {msg.startsWith('erro:') && <div className="msg msg-erro">❌ {msg.replace('erro:', '')}</div>}
 
         <div className="form-card">
           <form onSubmit={cadastrarProduto}>
             <div className="form-group">
-              <label>Nome da Peça</label>
+              <label>Nome da Comida Asiática</label>
               <input
                 type="text"
                 name="nome"
-                placeholder="Ex: Fresa de Topo 10mm"
+                placeholder="Ex: Sushi, Pad Thai..."
                 value={form.nome}
                 onChange={handleChange}
                 required

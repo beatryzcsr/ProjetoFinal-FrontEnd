@@ -7,8 +7,8 @@ export default function Home() {
       <Navbar />
       <div className="container">
         <div className="home-hero">
-          <h1>Sistema de Inventário</h1>
-          <p>Gerencie o estoque de peças e ferramentas de forma simples e rápida.</p>
+          <h1>Sistema de Comidas Japonesas</h1>
+          <p>Gerencie o estoque de comidas de forma simples e rápida.</p>
           <div className="home-actions">
             <Link to="/produtos"><button className="btn btn-primary">Ver Produtos</button></Link>
             <Link to="/cadastro"><button className="btn btn-secondary">Cadastrar Novo</button></Link>

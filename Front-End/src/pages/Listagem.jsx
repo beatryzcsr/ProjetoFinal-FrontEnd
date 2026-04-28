@@ -3,11 +3,11 @@ import Navbar from '../components/Navbar.jsx';
 import API_URL from '../services/api.js';
 
 const CATEGORIAS = [
-  'Ferramentas de Corte',
-  'Pastilhas e Insertos',
-  'Eixos e Componentes',
-  'Transmissão',
-  'Buchas e Rolamentos',
+  'Chinesa',
+  'Japonesa',
+  'Coreana',
+  'Tailandesa',
+  'Vietnamita',
   'Outros',
 ];
 
