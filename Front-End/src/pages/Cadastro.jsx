@@ -39,7 +39,7 @@ export default function Cadastro() {
 
       if (!resposta.ok) {
         const err = await resposta.json().catch(() => ({}));
-        throw new Error(err.mensagem || 'Erro ao cadastrar');
+        throw new Error(err.erro || 'Erro ao cadastrar');
       }
 
       setMsg('sucesso');
