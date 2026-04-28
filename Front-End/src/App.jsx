@@ -1,15 +1,14 @@
-import { Formulario, Home } from 'react-router-dom'
-import './App.css'
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home.jsx';
+import Listagem from './pages/Listagem.jsx';
+import Cadastro from './pages/Cadastro.jsx';
 
-
-
-function App() {
-
+export default function App() {
   return (
-    <>
-    <div className=''></div>
-    </>
-  )
+    <Routes>
+      <Route path="/"          element={<Home />} />
+      <Route path="/produtos"  element={<Listagem />} />
+      <Route path="/cadastro"  element={<Cadastro />} />
+    </Routes>
+  );
 }
-
-export default App
