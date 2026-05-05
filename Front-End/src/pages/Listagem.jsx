@@ -181,7 +181,13 @@ export default function ProdutosPage() {
           <div key={p.id} className="produto">
             {editando === p.id ? (
               <form onSubmit={salvarEdicao}>
-                <input value={formEdicao.nome} onChange={e => setFormEdicao({ ...formEdicao, nome: e.target.value })} />
+                <input value={formEdicao.nome} onChange={e => setFormEdicao({ ...formEdicao, nome: e.target.value })}/>
+
+                <input value={formEdicao.preco} onChange={e => setFormEdicao({ ... formEdicao, preco: e.target.value})} />
+
+                <input value={formEdicao.estoque} onChange={e => setFormEdicao({ ... formEdicao, estoque: e.target.value})} />
+
+                
                 <button>Salvar</button>
               </form>
             ) : (
