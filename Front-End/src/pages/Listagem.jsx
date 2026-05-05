@@ -5,11 +5,11 @@ import API_URL from '../services/api.js';
 const VAZIO = { nome: '', preco: '', estoque: '', categoria: '' };
 
 const CATEGORIAS = [
-  'Ferramentas de Corte',
-  'Pastilhas e Insertos',
-  'Eixos e Componentes',
-  'Transmissão',
-  'Buchas e Rolamentos',
+  'Japonesa',
+  'Coreana',
+  'Chinesa',
+  'Tailandesa',
+  'Vietnamita',
   'Outros',
 ];
 
