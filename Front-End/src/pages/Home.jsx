@@ -6,32 +6,18 @@ export default function Home() {
     <div>
       <Navbar />
       <div className="container">
+
+        <img src="./public/sakura.png" alt="Sakura" className="element1" />
+
         <div className="home-hero">
-          <h1>Sistema de Inventário</h1>
-          <p>Gerencie o estoque de peças e ferramentas de forma simples e rápida.</p>
-          <div className="home-actions">
-            <Link to="/produtos"><button className="btn btn-primary">Ver Produtos</button></Link>
-            <Link to="/cadastro"><button className="btn btn-secondary">Cadastrar Novo</button></Link>
-          </div>
+          <h1 className="t1">Lotus</h1>
+          <h1 className="t2">Byte</h1>
+            <Link to="/produtos"><button className="btn btn-primary">Produtos</button></Link>
         </div>
 
-        <div className="home-cards">
-          <div className="info-card">
-            <span className="info-icon">📋</span>
-            <h3>Listagem</h3>
-            <p>Visualize todos os produtos cadastrados no sistema.</p>
-          </div>
-          <div className="info-card">
-            <span className="info-icon">➕</span>
-            <h3>Cadastro</h3>
-            <p>Adicione novos produtos com nome, preço, estoque e categoria.</p>
-          </div>
-          <div className="info-card">
-            <span className="info-icon">✏️</span>
-            <h3>Edição e Exclusão</h3>
-            <p>Atualize ou remova produtos diretamente na listagem.</p>
-          </div>
-        </div>
+        <img src="./public/comida.png" alt="comida" className="element2" />
+        <img src="./public/sakura.png" alt="Sakura" className="element3" />
+
       </div>
     </div>
   );
