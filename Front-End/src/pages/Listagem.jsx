@@ -49,7 +49,10 @@ export default function ProdutosPage() {
   }
 
   useEffect(() => {
-    buscarProdutos();
+    async function carregar() {
+    await buscarProdutos();  
+    }
+    carregar();
   }, []);
 
   // ========================
@@ -121,9 +124,9 @@ export default function ProdutosPage() {
     }
   }
 
-  const filtrados = produtos.filter(p =>
-    p.nome.toLowerCase().includes(busca.toLowerCase()) ||
-    p.categoria.toLowerCase().includes(busca.toLowerCase())
+    const filtrados = produtos.filter(p =>
+  (p.nome || '').toLowerCase().includes(busca.toLowerCase()) ||
+  (p.categoria || '').toLowerCase().includes(busca.toLowerCase())
   );
 
   // ========================
@@ -137,7 +140,7 @@ export default function ProdutosPage() {
          <img src="./public/sakura.png" alt="Sakura" className="element1" />
 
         {msg === 'sucesso' && <div className="msg msg-sucesso">✅ Cadastrado!</div>}
-        {msg.startsWith('erro:') && <div className="msg msg-erro">❌ {msg}</div>}
+        {msgEdicao.startsWith('erro:') && <div className="msg msg-erro">❌ {msg}</div>}
 
         <div className="form-card">
           <form onSubmit={cadastrarProduto}>
