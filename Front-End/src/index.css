@@ -14,9 +14,10 @@ body {
   background:  var(--rosa);
 }
 
+
 /* ── menu ── */
 
-.navbar {
+.menu {
   display: flex;
   align-items: center;
   justify-content: center; 
@@ -26,7 +27,7 @@ body {
   font-family: var(--texto);
 }
 
-.navbar-links {
+.menu-links {
   display: flex;
   gap: 1rem;
   align-items: center;
@@ -58,50 +59,59 @@ body {
 }
 
 .element1 {
+  position: absolute;
   height: 35rem;
  top:-40px;
- margin-left:-40rem;
+ margin-left:-35rem;
  transform: rotate(10deg);
- position: absolute;
+ 
 }
 
 .element2 {
-   position: fixed;
+   position: absolute;
   right: 10rem;  
-  top: 20rem;
-  height: 35rem;
+  top: 17rem;
+  height: 30rem;
 }
 
 .element3 {
+  position: absolute;
+  top: 200px;
+  left: 85rem;
  height: 35rem;
- top:200px;
- margin-left:70rem;
  transform: rotate(-40deg);
- position: fixed;
+ 
 }
 
-.home-hero {
+.home-main{
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 80vh;
   padding-left: clamp(0.5rem, 2vw, 2rem);
 }
+.home-main p {
+  font-family: var(--texto);
+  font-size: 20px;
+  margin-left: -125px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 
-.home-hero .t1,
-.home-hero .t2 {
+.home-main .t1,
+.home-main .t2 {
   font-size: clamp(3rem, 10vw, 10rem);
   margin: 0;
   line-height: 0.9;
   transform: translateX(-35%);
 }
 
-.home-hero .t1 {
+.home-main .t1 {
   color: var(--verde);
   font-family: var(--titulo);
 }
 
-.home-hero .t2 {
+.home-main .t2 {
   color: var(--amarelo);
   font-family: var(--titulo);
 }
@@ -109,14 +119,14 @@ body {
 /* responsividade  do container tablet*/
 @media (max-width: 1024px) {
 
-  .home-hero {
+  .home-main {
     padding-left: 2rem;
     transform: none; 
     align-items: flex-start;
   }
 
-  .home-hero .t1,
-  .home-hero .t2 {
+  .home-main .t1,
+  .home-main .t2 {
     font-size: clamp(3rem, 7vw, 6rem);
   }
 
@@ -153,15 +163,15 @@ body {
     margin-right: -100px;
   }
 
-  .home-hero {
+  .home-main {
     height: auto;
     padding: 2rem;
     text-align: center;
     align-items: center;
   }
 
-  .home-hero .t1,
-  .home-hero .t2 {
+  .home-main .t1,
+  .home-main .t2 {
     font-size: clamp(2.5rem, 12vw, 5rem);
   }
 }

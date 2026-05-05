@@ -31,9 +31,8 @@ export default function ProdutosPage() {
   const [formEdicao, setFormEdicao] = useState(VAZIO);
   const [msgEdicao, setMsgEdicao] = useState('');
 
-  // ========================
   // BUSCAR PRODUTOS
-  // ========================
+ 
   async function buscarProdutos() {
     try {
       setLoading(true);
@@ -55,9 +54,8 @@ export default function ProdutosPage() {
     carregar();
   }, []);
 
-  // ========================
   // CADASTRO
-  // ========================
+  
   function handleChange(e) {
     const { name, value } = e.target;
     setForm(prev => ({ ...prev, [name]: value }));
