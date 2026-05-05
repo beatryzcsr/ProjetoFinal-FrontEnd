@@ -140,7 +140,8 @@ export default function ProdutosPage() {
          <img src="./public/sakura.png" alt="Sakura" className="element1" />
 
         {msg === 'sucesso' && <div className="msg msg-sucesso">✅ Cadastrado!</div>}
-        {msgEdicao.startsWith('erro:') && <div className="msg msg-erro">❌ {msg}</div>}
+        {msg.startsWith('erro:') && <div className="msg msg-erro">❌ {msg}</div>}
+        {msgEdicao.startsWith('erro:') && <div className="msg msg-erro">❌ {msgEdicao}</div>}
 
         <div className="form-card">
           <form onSubmit={cadastrarProduto}>
