@@ -186,7 +186,7 @@ export default function ProdutosPage() {
               </form>
             ) : (
               <div>
-                <strong>{p.nome}</strong> - {p.categoria}
+                <strong>Nome:</strong>  {p.nome} | <strong>Preço:</strong> R${p.preco} | <strong>Estoque:</strong> {p.estoque} | <strong>Categoria:</strong> {p.categoria} 
                 <button onClick={() => prepararEdicao(p)}>Editar</button>
                 <button onClick={() => excluirProduto(p.id)}>Excluir</button>
               </div>
