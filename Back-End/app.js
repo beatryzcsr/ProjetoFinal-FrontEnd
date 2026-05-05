@@ -3,11 +3,16 @@
 require('dotenv').config();
 
 const express = require('express');
-const app = express(); 
+const cors = require('cors');
+const app = express();
+const pool = require('./src/config/database');
 const produtosRoutes = require('./src/routes/produtoRoutes');  
  
 // Middleware para servir os arquivos estáticos do front-end 
 app.use(express.static('./public')); 
+ 
+// Middleware CORS para aceitar requisições do frontend
+app.use(cors()); 
  
 // Middleware para interpretar JSON no corpo das requisições 
 app.use(express.json()); 
