@@ -14,6 +14,7 @@ body {
   background:  var(--rosa);
 }
 
+
 /* ── menu ── */
 
 .navbar {
@@ -58,26 +59,28 @@ body {
 }
 
 .element1 {
+  position: absolute;
   height: 35rem;
  top:-40px;
- margin-left:-40rem;
+ margin-left:-35rem;
  transform: rotate(10deg);
- position: absolute;
+ 
 }
 
 .element2 {
-   position: fixed;
+   position: absolute;
   right: 10rem;  
-  top: 20rem;
-  height: 35rem;
+  top: 17rem;
+  height: 30rem;
 }
 
 .element3 {
+  position: absolute;
+  top: 200px;
+  left: 85rem;
  height: 35rem;
- top:200px;
- margin-left:70rem;
  transform: rotate(-40deg);
- position: fixed;
+ 
 }
 
 .home-hero {
@@ -86,6 +89,14 @@ body {
   justify-content: center;
   height: 80vh;
   padding-left: clamp(0.5rem, 2vw, 2rem);
+}
+
+.home-hero p {
+  font-family: var(--texto);
+  font-size: 20px;
+  margin-left: -125px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .home-hero .t1,

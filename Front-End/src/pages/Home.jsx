@@ -12,6 +12,7 @@ export default function Home() {
         <div className="home-hero">
           <h1 className="t1">Lotus</h1>
           <h1 className="t2">Byte</h1>
+          <p>Armazene e Administre seu estoque!</p>
             <Link to="/produtos"><button className="btn btn-primary">Produtos</button></Link>
         </div>
 
